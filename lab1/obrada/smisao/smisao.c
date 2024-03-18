@@ -13,4 +13,6 @@ int smisao(char *ulaz, size_t vel_ulaza, int kako, char *izlaz, size_t vel_izlaz
 		return smisao_na_brzinu(ulaz, vel_ulaza, izlaz, vel_izlaza);
 	else if ((kako & ZASTAVICA(OBRADI_SMISAO_DUBLJE)))
 		return smisao_dublje(ulaz, vel_ulaza, izlaz, vel_izlaza);
+
+	return -1;
 }
