@@ -2,7 +2,6 @@
 
 #include "izlaz.h"
 #include "datoteka/datoteka.h"
-#include "ispis/ispis.h"
 #include "../postavke.h"
 
 int spremi(char *rezultat, size_t velicina, int kamo)
@@ -13,7 +12,9 @@ int spremi(char *rezultat, size_t velicina, int kamo)
 		status = spremi_u_datoteku(rezultat, velicina);
 	
 	if ((kamo & ZASTAVICA(ISPISI_NA_ZASLON)))
-		status = ispisi_na_zaslon(rezultat, velicina);
-	
+		printf("Projekt %s (autor %s)\n", PROJEKT, AUTOR);
+		printf("Rezultat:\n%.*s", (int) velicina, rezultat);
+		status = velicina;
+		
 	return status;
 }
